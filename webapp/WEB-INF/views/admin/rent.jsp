@@ -19,52 +19,43 @@
 						<th>번호</th>
 						<th>타이틀</th>
 						<th>카테고리</th>
-						<th>&nbsp;</th>
+						<th>대여일</th>
+						<th>반납일</th>
 					</tr>
 					<tr>
 						<td>5</td>
 						<td>세상의 중심에서 사랑을 외친 짐승</td>
 						<td>도서(소설)</td>
-						<td>
-							<a href="${pageContext.servletContext.contextPath }/rent" class="btn">대여</a>
-							<a href="${pageContext.servletContext.contextPath }/rent" class="btn">예약</a>
-						</td>
+						<td>2018년 5월 2일</td>
+						<td>2018년 5월 9일</td>
 					</tr>
 					<tr>
 						<td>4</td>
 						<td>AC/DC: Fly On The Wall</td>
 						<td>음반(락)</td>
-						<td>
-							<a href="${pageContext.servletContext.contextPath }/rent" class="btn">대여</a>
-							<a href="${pageContext.servletContext.contextPath }/rent" class="btn">예약</a>
-						</td>
+						<td>2018년 5월 2일</td>
+						<td>2018년 5월 9일</td>
 					</tr>						
 					<tr>
 						<td>3</td>
 						<td>Java의 정석 [3판]</td>
 						<td>도서(IT)</td>
-						<td>
-							<a href="${pageContext.servletContext.contextPath }/rent" class="btn">대여</a>
-							<a href="${pageContext.servletContext.contextPath }/rent" class="btn">예약</a>
-						</td>
+						<td>2018년 5월 2일</td>
+						<td>2018년 5월 9일</td>
 					</tr>
 					<tr>
 						<td>2</td>
 						<td>파리로 가는 길</td>
 						<td>DVD(영화-드라마)</td>
-						<td>
-							<a href="${pageContext.servletContext.contextPath }/rent" class="btn">대여</a>
-							<a href="${pageContext.servletContext.contextPath }/rent" class="btn">예약</a>
-						</td>
+						<td>2018년 5월 2일</td>
+						<td>2018년 5월 9일</td>
 					</tr>				
 					<tr>
 						<td>1</td>
 						<td>브루크너: 교향곡 7번</td>
 						<td>음반(클래식)</td>
-						<td>
-							<a href="${pageContext.servletContext.contextPath }/rent" class="btn">대여</a>
-							<a href="${pageContext.servletContext.contextPath }/rent" class="btn">예약</a>
-						</td>
+						<td>2018년 5월 2일</td>
+						<td>2018년 5월 9일</td>
 					</tr>				
 				</table>
 				<div class="pager">
