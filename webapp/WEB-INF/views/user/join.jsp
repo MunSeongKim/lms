@@ -22,7 +22,7 @@
 					name="joinForm"
 					method="post"
 					action="${pageContext.servletContext.contextPath }/user/join">
-					
+					<form:input path="role" type="hidden" value="USER"/>
 					<label class="block-label" for="name"><spring:message code="name" text="이름"/></label>
 					<input id="name" name="name" type="text" value="${user.name }">
 
@@ -38,10 +38,13 @@
 					<label class="block-label">패스워드</label>
 					<form:password path="password" />
 					
+					<label class="block-label" for="phone">연락처</label>
+					<form:input path="phone"/>
+					
 					<fieldset>
 						<legend>성별</legend>
-						<label>여</label> <input type="radio" name="gender" value="female" checked="checked">
-						<label>남</label> <input type="radio" name="gender" value="male">
+						<label>여</label> <input type="radio" name="gender" value="FEMALE" checked="checked">
+						<label>남</label> <input type="radio" name="gender" value="MALE">
 					</fieldset>
 					
 					<fieldset>
@@ -51,7 +54,6 @@
 					</fieldset>
 					
 					<input type="submit" value="가입하기">
-					
 				</form:form>
 			</div>
 		</div>

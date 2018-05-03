@@ -16,6 +16,7 @@
 			<div id="user">
 
 				<form id="join-form" name="joinForm" method="post" action="${pageContext.servletContext.contextPath }/user/modify">
+					<input id="no" name="no" type="hidden" value="${user.no }" />
 					<label class="block-label" for="name">이름</label>
 					<input id="name" name="name" type="text" value="${user.name }">
 
@@ -24,17 +25,20 @@
 					
 					<label class="block-label">패스워드</label>
 					<input name="password" type="password" value="">
+
+					<label class="block-label" for="phone">연락처</label>
+					<input id="phone" name="phone" type="text" value="${user.phone }">
 					
 					<fieldset>
 						<legend>성별</legend>
 						<c:choose>
-							<c:when test='${user.gender == "male" }'>
-								<label>여</label> <input type="radio" name="gender" value="female">
-								<label>남</label> <input type="radio" name="gender" value="male" checked="checked">
+							<c:when test='${user.gender == "MALE" }'>
+								<label>여</label> <input type="radio" name="gender" value="FEMALE">
+								<label>남</label> <input type="radio" name="gender" value="MALE" checked="checked">
 							</c:when>
 							<c:otherwise>
-								<label>여</label> <input type="radio" name="gender" value="female" checked="checked">
-								<label>남</label> <input type="radio" name="gender" value="male">
+								<label>여</label> <input type="radio" name="gender" value="FEMALE" checked="checked">
+								<label>남</label> <input type="radio" name="gender" value="MALE">
 							</c:otherwise>
 						</c:choose>
 					</fieldset>

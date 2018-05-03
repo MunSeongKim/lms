@@ -15,7 +15,12 @@
 		<div id="content">
 			<div id="rent-result">
 				<p class="success">
+					<c:if test="${message eq 'fail' }">
+					대여(예약)에 실패했습니다.
+					</c:if>
+					<c:if test="${message eq 'success' }">
 					정상적으로 대여(예약)이 되었습니다.
+					</c:if>
 					<br><br>
 					<a href="${pageContext.servletContext.contextPath }">목록으로 돌아가기</a>
 				</p>				

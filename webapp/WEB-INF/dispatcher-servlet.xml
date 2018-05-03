@@ -19,12 +19,19 @@
 			<bean
 				class="org.springframework.data.web.PageableHandlerMethodArgumentResolver" />
 			<bean
-				class="com.cafe24.security.AuthMemberHandlerMethodArgumentResolver" />
+				class="com.cafe24.security.AuthUserHandlerMethodArgumentResolver" />
 		</mvc:argument-resolvers>
 	</mvc:annotation-driven>
 
 	<!-- Interceptors -->
 	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<mvc:exclude-mapping path="/user/auth" />
+			<mvc:exclude-mapping path="/user/logout" />
+			<mvc:exclude-mapping path="/assets/**" />
+			<bean class="org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor"/>
+		</mvc:interceptor>
 		<mvc:interceptor>
 			<mvc:mapping path="/user/auth" />
 			<bean class="com.cafe24.security.AuthLoginInterceptor" />

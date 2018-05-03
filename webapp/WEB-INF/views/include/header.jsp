@@ -6,11 +6,21 @@
 		<div id="header">
 			<h1>도서대여서비스</h1>
 			<ul>
-				<li><a href="${pageContext.servletContext.contextPath }/user/login">로그인</a><li>
-				<li><a href="${pageContext.servletContext.contextPath }/user/join">회원가입</a><li>
-				<li><a href="${pageContext.servletContext.contextPath }/admin">관리자페이지</a><li>
-				<li><a href="${pageContext.servletContext.contextPath }/user/modify">회원정보수정</a><li>
-				<li><a href="${pageContext.servletContext.contextPath }/user/logout">로그아웃</a><li>
-				<li>${authUser.name }님 안녕하세요 ^^;</li>
+				<c:choose>
+				<c:when test="${empty authUser }">
+					<li><a href="${pageContext.servletContext.contextPath }/user/login">로그인</a></li>
+					<li><a href="${pageContext.servletContext.contextPath }/user/join">회원가입</a></li>
+				</c:when>
+				<c:otherwise>
+					<c:if test="${authUser.role eq 'ADMIN' }">
+						<li><a href="${pageContext.servletContext.contextPath }/admin">관리자페이지</a></li>
+					</c:if>
+					<c:if test="${authUser.role ne 'ADMIN' }">
+						<li><a href="${pageContext.servletContext.contextPath }/user/modify">회원정보수정</a></li>
+					</c:if>
+					<li><a href="${pageContext.servletContext.contextPath }/user/logout">로그아웃</a></li>
+					<li>${authUser.name }님 안녕하세요 ^^;</li>
+				</c:otherwise>
+				</c:choose>
 			</ul>
 		</div>
